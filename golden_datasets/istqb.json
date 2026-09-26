@@ -1,0 +1,127 @@
+{
+  "version": "1.0.0",
+  "description": "ISTQB CTFL v4.0 golden dataset — deterministic multiple choice, source: official ISTQB sample exam A",
+  "source": "https://www.istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/",
+  "entries": [
+    {
+      "id": "ISTQB-001",
+      "question": "Which of the following statements describe a valid test objective? a) To prove that there are no unfixed defects in the system under test b) To prove that there will be no failures after the implementation of the system into production c) To reduce the risk level of the test object and to build confidence in the quality level d) To verify that there are no untested combinations of inputs",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "c",
+      "difficulty": "easy",
+      "tags": ["fundamentals", "test-objectives"]
+    },
+    {
+      "id": "ISTQB-002",
+      "question": "Which of the following options shows an example of test activities that contribute to success? a) Having testers involved during various SDLC activities will help to detect defects in work products b) Testers try not to disturb the developers while coding, so that the developers write better code c) Testers collaborating with end users help to improve the quality of defect reports during component integration and system testing d) Certified testers will design much better test cases than non-certified testers",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "a",
+      "difficulty": "easy",
+      "tags": ["fundamentals", "success-factors"]
+    },
+    {
+      "id": "ISTQB-003",
+      "question": "You have noticed that no changes have been made to the existing regression test cases for several iterations and no new regression defects were identified. Your manager is happy, but you are not. Which testing principle explains your skepticism? a) Tests wear out b) Absence-of-errors fallacy c) Defects cluster together d) Exhaustive testing is impossible",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "a",
+      "difficulty": "medium",
+      "tags": ["fundamentals", "testing-principles"]
+    },
+    {
+      "id": "ISTQB-004",
+      "question": "The team decided to implement the payment functionality. Which of the following activities is a part of test analysis? a) Estimating that testing the integration with the payment service will take 8 person-days b) Deciding that the team should test if it is possible to properly share payment between many users c) Using BVA to derive the test data for test cases that check the correct payment processing d) Analyzing the discrepancy between actual and expected result and reporting a defect",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "b",
+      "difficulty": "medium",
+      "tags": ["fundamentals", "test-analysis"]
+    },
+    {
+      "id": "ISTQB-005",
+      "question": "Which of the following factors have a SIGNIFICANT influence on the test approach? i) The SDLC ii) The number of defects detected in previous projects iii) The identified product risks iv) New regulatory requirements forcing formal white-box testing v) The test environment setup. Options: a) i, ii b) i, iii, iv c) ii, iv, v d) iii, v",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "b",
+      "difficulty": "medium",
+      "tags": ["fundamentals", "test-approach"]
+    },
+    {
+      "id": "ISTQB-006",
+      "question": "Which of the following BEST describes ATDD? a) Acceptance criteria are typically created based on given/when/then format b) Test cases are mainly created at component testing and are code-oriented c) Tests are created based on acceptance criteria to drive the development of the related software d) Tests are based on the desired behavior of the software, which makes it easier for team members to understand them",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "c",
+      "difficulty": "easy",
+      "tags": ["sdlc", "atdd"]
+    },
+    {
+      "id": "ISTQB-007",
+      "question": "Which of the following is NOT an example of the shift left approach? a) Reviewing the user requirements before they are formally accepted b) Writing a component test before the corresponding code is written c) Executing a performance efficiency test for a component during component testing d) Writing a test script before setting up the configuration management process",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "d",
+      "difficulty": "medium",
+      "tags": ["sdlc", "shift-left"]
+    },
+    {
+      "id": "ISTQB-008",
+      "question": "Which types of failures fit which test levels BEST? 1) Failures in system behavior deviating from business needs 2) Failures in communication between components 3) Failures in logic in a module 4) Failures in not correctly implemented business rules. A) Component testing B) Component integration testing C) System testing D) Acceptance testing. Options: a) 1D,2B,3A,4C b) 1D,2B,3C,4A c) 1B,2A,3D,4C d) 1C,2B,3A,4D",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "a",
+      "difficulty": "hard",
+      "tags": ["test-levels", "mapping"]
+    },
+    {
+      "id": "ISTQB-009",
+      "question": "Which of the following is NOT a benefit of static testing? a) Having less expensive defect management due to the ease of detecting defects later in the SDLC b) Fixing defects found during static testing is generally much less expensive than fixing defects found during dynamic testing c) Finding coding defects that might not have been found by only performing dynamic testing d) Detecting gaps and inconsistencies in requirements",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "a",
+      "difficulty": "medium",
+      "tags": ["static-testing", "benefits"]
+    },
+    {
+      "id": "ISTQB-010",
+      "question": "Which of the following is a characteristic of experience-based test techniques? a) Test cases are created based on detailed design information b) Items tested within the interface code section are used to measure coverage c) The techniques heavily rely on the tester's knowledge of the software and the business domain d) The test cases are used to identify deviations from the requirements",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "c",
+      "difficulty": "easy",
+      "tags": ["test-techniques", "experience-based"]
+    },
+    {
+      "id": "ISTQB-011",
+      "question": "Your test suite achieved 100% statement coverage. What is the consequence? a) Each instruction in the code that contains a defect has been executed at least once b) Any test suite containing more test cases than yours will also achieve 100% statement coverage c) Each path in the code has been executed at least once d) Every combination of input values has been tested at least once",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "a",
+      "difficulty": "medium",
+      "tags": ["white-box", "statement-coverage"]
+    },
+    {
+      "id": "ISTQB-012",
+      "question": "Which of the following BEST describes the concept behind error guessing? a) Using your knowledge and experience of defects found in the past and typical errors made by developers b) Using your personal experience of development and the errors you made as a developer c) Imagining that you are the user and guessing errors the user could make d) Rapidly duplicating the development task to identify errors a developer might make",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "a",
+      "difficulty": "easy",
+      "tags": ["test-techniques", "error-guessing"]
+    },
+    {
+      "id": "ISTQB-013",
+      "question": "Your team uses three-point estimation. Most optimistic: 2 person-hours, most likely: 11 person-hours, most pessimistic: 14 person-hours. What is the final estimate? a) 9 b) 14 c) 11 d) 10",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "d",
+      "difficulty": "hard",
+      "tags": ["test-management", "estimation"]
+    },
+    {
+      "id": "ISTQB-014",
+      "question": "During risk analysis the following risk was identified: Response time is too long to generate a report. Risk likelihood: medium, risk impact: high. Response: independent test team performs performance testing, selected end users perform alpha and beta acceptance testing. What measure is proposed? a) Risk acceptance b) Contingency plan c) Risk mitigation d) Risk transfer",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "c",
+      "difficulty": "medium",
+      "tags": ["risk-management", "mitigation"]
+    },
+    {
+      "id": "ISTQB-015",
+      "question": "Which item correctly identifies a potential risk of performing test automation? a) It may introduce unknown regressions in production b) Sufficient efforts to maintain testware may not be properly allocated c) Testing tools and associated testware may not be sufficiently relied upon d) It may reduce the time allocated for manual testing",
+      "choices": ["a", "b", "c", "d"],
+      "correct_choice": "b",
+      "difficulty": "easy",
+      "tags": ["test-tools", "automation-risks"]
+    }
+  ]
+}
