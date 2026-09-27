@@ -1,0 +1,75 @@
+{
+  "description": "Python coding golden dataset — LLM generates code, we verify by running it",
+  "entries": [
+    {
+      "id": "CODE-001",
+      "prompt": "Write a Python function called `reverse_string` that takes a string and returns it reversed.",
+      "test_code": "assert reverse_string('hello') == 'olleh'\nassert reverse_string('') == ''\nassert reverse_string('a') == 'a'\nassert reverse_string('racecar') == 'racecar'",
+      "difficulty": "easy",
+      "tags": ["string", "basics"]
+    },
+    {
+      "id": "CODE-002",
+      "prompt": "Write a Python function called `fizzbuzz` that takes an integer n and returns a list of strings from 1 to n. For multiples of 3 return 'Fizz', for multiples of 5 return 'Buzz', for multiples of both return 'FizzBuzz', otherwise return the number as a string.",
+      "test_code": "result = fizzbuzz(15)\nassert result[0] == '1'\nassert result[2] == 'Fizz'\nassert result[4] == 'Buzz'\nassert result[14] == 'FizzBuzz'\nassert len(result) == 15",
+      "difficulty": "easy",
+      "tags": ["logic", "classics"]
+    },
+    {
+      "id": "CODE-003",
+      "prompt": "Write a Python function called `flatten_list` that takes a nested list (any depth) and returns a flat list. Example: flatten_list([1, [2, [3, 4], 5]]) should return [1, 2, 3, 4, 5].",
+      "test_code": "assert flatten_list([1, [2, [3, 4], 5]]) == [1, 2, 3, 4, 5]\nassert flatten_list([]) == []\nassert flatten_list([1, 2, 3]) == [1, 2, 3]\nassert flatten_list([[[[1]]]]) == [1]",
+      "difficulty": "medium",
+      "tags": ["recursion", "lists"]
+    },
+    {
+      "id": "CODE-004",
+      "prompt": "Write a Python function called `count_words` that takes a string and returns a dictionary with each word as key and its count as value. Words should be lowercased. Ignore punctuation.",
+      "test_code": "result = count_words('Hello hello world')\nassert result['hello'] == 2\nassert result['world'] == 1\nassert len(result) == 2",
+      "difficulty": "easy",
+      "tags": ["string", "dictionary"]
+    },
+    {
+      "id": "CODE-005",
+      "prompt": "Write a Python function called `is_valid_email` that takes a string and returns True if it matches a basic email pattern (contains exactly one @, has text before and after @, has a dot after @). No regex allowed.",
+      "test_code": "assert is_valid_email('user@example.com') == True\nassert is_valid_email('user@.com') == False\nassert is_valid_email('user@@example.com') == False\nassert is_valid_email('userexample.com') == False\nassert is_valid_email('@example.com') == False\nassert is_valid_email('user@example') == False",
+      "difficulty": "medium",
+      "tags": ["validation", "string"]
+    },
+    {
+      "id": "CODE-006",
+      "prompt": "Write a Python function called `merge_sorted` that takes two sorted lists and returns a single sorted list. Do not use the built-in sort() or sorted().",
+      "test_code": "assert merge_sorted([1, 3, 5], [2, 4, 6]) == [1, 2, 3, 4, 5, 6]\nassert merge_sorted([], [1, 2]) == [1, 2]\nassert merge_sorted([1], []) == [1]\nassert merge_sorted([1, 1], [1, 1]) == [1, 1, 1, 1]",
+      "difficulty": "medium",
+      "tags": ["algorithms", "sorting"]
+    },
+    {
+      "id": "CODE-007",
+      "prompt": "Write a Python function called `csv_to_dicts` that takes a CSV string (first line is headers) and returns a list of dictionaries. Example: 'name,age\\nAlice,30\\nBob,25' returns [{'name': 'Alice', 'age': '30'}, {'name': 'Bob', 'age': '25'}].",
+      "test_code": "result = csv_to_dicts('name,age\\nAlice,30\\nBob,25')\nassert len(result) == 2\nassert result[0]['name'] == 'Alice'\nassert result[1]['age'] == '25'",
+      "difficulty": "medium",
+      "tags": ["parsing", "csv"]
+    },
+    {
+      "id": "CODE-008",
+      "prompt": "Write a Python function called `find_duplicates` that takes a list and returns a list of elements that appear more than once, in the order they were first duplicated.",
+      "test_code": "assert find_duplicates([1, 2, 3, 2, 4, 3]) == [2, 3]\nassert find_duplicates([1, 2, 3]) == []\nassert find_duplicates([]) == []\nassert find_duplicates([1, 1, 1]) == [1]",
+      "difficulty": "easy",
+      "tags": ["lists", "sets"]
+    },
+    {
+      "id": "CODE-009",
+      "prompt": "Write a Python function called `matrix_multiply` that takes two 2D lists (matrices) and returns their product. Assume compatible dimensions.",
+      "test_code": "a = [[1, 2], [3, 4]]\nb = [[5, 6], [7, 8]]\nassert matrix_multiply(a, b) == [[19, 22], [43, 50]]\nassert matrix_multiply([[1]], [[1]]) == [[1]]",
+      "difficulty": "hard",
+      "tags": ["math", "algorithms"]
+    },
+    {
+      "id": "CODE-010",
+      "prompt": "Write a Python function called `retry` that is a decorator. It should retry the decorated function up to 3 times if it raises an exception. If all 3 attempts fail, re-raise the last exception.",
+      "test_code": "call_count = 0\n@retry\ndef flaky():\n    global call_count\n    call_count += 1\n    if call_count < 3:\n        raise ValueError('fail')\n    return 'ok'\nassert flaky() == 'ok'\nassert call_count == 3",
+      "difficulty": "hard",
+      "tags": ["decorators", "error-handling"]
+    }
+  ]
+}
