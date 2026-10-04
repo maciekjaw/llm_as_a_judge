@@ -1,0 +1,36 @@
+name: LLM Eval Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Note: Full eval requires API keys (GEMINI_API_KEY).
+      # In CI we run only the structural tests.
+      # Full eval runs locally or in a scheduled workflow
+      # with secrets configured.
+
+      - name: Run structural tests
+        run: |
+          python -c "from golden_datasets.schema import GoldenDataset; print('Schema OK')"
+          python -c "import json; d=json.load(open('golden_datasets/istqb.json')); print(f'ISTQB: {len(d[\"entries\"])} entries')"
+          python -c "import json; d=json.load(open('golden_datasets/python_coding.json')); print(f'Coding: {len(d[\"entries\"])} entries')"
+
+      - name: Run pytest (on existing results)
+        if: hashFiles('reports/eval_*.json') != ''
+        run: pytest tests/ -v

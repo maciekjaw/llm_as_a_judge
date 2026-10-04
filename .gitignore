@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment variables (klucze API!)
+.env
+
+# Reports (generowane, nie commitujemy)
+reports/*.html
+reports/*.json
+
+# OS
+.DS_Store
+Thumbs.db
