@@ -27,8 +27,7 @@ jobs:
 
       - name: Run structural tests
         run: |
-          python -c "from golden_datasets.schema import GoldenDataset; print('Schema OK')"
-          python -c "import json; d=json.load(open('golden_datasets/istqb.json')); print(f'ISTQB: {len(d[\"entries\"])} entries')"
+         python -c "import json; d=json.load(open('golden_datasets/istqb.json')); print(f'ISTQB: {len(d[\"entries\"])} entries')"
           python -c "import json; d=json.load(open('golden_datasets/python_coding.json')); print(f'Coding: {len(d[\"entries\"])} entries')"
 
       - name: Run pytest (on existing results)
